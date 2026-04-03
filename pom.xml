@@ -188,5 +188,6 @@
 			<artifactId>netty-codec-http</artifactId>
 			<version>4.1.131.Final</version>
 		</dependency>
+
 	</dependencies>
 </project>
