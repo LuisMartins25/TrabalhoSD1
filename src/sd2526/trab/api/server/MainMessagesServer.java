@@ -6,6 +6,7 @@ import org.glassfish.jersey.jdkhttp.JdkHttpServerFactory;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.jackson.JacksonFeature;
 import sd2526.trab.api.java.Messages;
+import sd2526.trab.api.java.Users;
 import sd2526.trab.api.rest.RestMessagesBridge;
 
 public class MainMessagesServer {
@@ -19,12 +20,13 @@ public class MainMessagesServer {
 
             String serverURI = String.format("http://0.0.0.0:%s/rest", serverPort);
 
-            Messages messagesLogic = new MessagesService(domain);
+            Users usersLogic = new UsersService(domain);
+
+            Messages messagesLogic = new MessagesService(domain, usersLogic);
 
             ResourceConfig config = new ResourceConfig();
 
             config.register(JacksonFeature.class);
-
 
             config.register(new RestMessagesBridge(messagesLogic));
 
