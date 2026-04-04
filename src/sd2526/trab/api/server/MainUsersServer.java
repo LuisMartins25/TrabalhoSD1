@@ -17,8 +17,7 @@ public class MainUsersServer {
             String domain = (args.length > 0) ? args[0] : "fct";
             String serverPort = (args.length > 1) ? args[1] : "8080";
 
-            String serverURI = String.format("http://0.0.0.0:%s/rest/", serverPort);
-
+            String serverURI = String.format("http://0.0.0.0:%s/rest", serverPort);
             Users usersLogic = new UsersService(domain);
 
             ResourceConfig config = new ResourceConfig();

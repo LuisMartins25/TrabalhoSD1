@@ -9,7 +9,7 @@ import sd2526.trab.api.User;
 import sd2526.trab.api.java.Users;
 import sd2526.trab.api.java.Result;
 
-@Path(RestUsers.PATH)
+@Path("/users")
 public class RestUsersBridge  implements  RestUsers{
     private final Users users;
 

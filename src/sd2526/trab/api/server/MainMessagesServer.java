@@ -18,8 +18,7 @@ public class MainMessagesServer {
             String domain = (args.length > 0) ? args[0] : "fct";
             String serverPort = (args.length > 1) ? args[1] : "8081";
 
-            String serverURI = String.format("http://0.0.0.0:%s/rest/", serverPort);
-
+            String serverURI = String.format("http://0.0.0.0:%s/rest", serverPort);
             Users usersLogic = new UsersService(domain);
 
             Messages messagesLogic = new MessagesService(domain, usersLogic);

@@ -23,7 +23,7 @@ public class UsersService implements Users {
             return Result.error(Result.ErrorCode.BAD_REQUEST);
         }
 
-        if (!domain.equals(user.getDomain())) {
+        if (!user.getDomain().equals(this.domain)) {
             return Result.error(Result.ErrorCode.FORBIDDEN);
         }
 

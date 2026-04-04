@@ -9,7 +9,7 @@ import sd2526.trab.api.Message;
 import sd2526.trab.api.java.Messages;
 import sd2526.trab.api.java.Result;
 
-@Path(RestUsers.PATH)
+@Path(sd2526.trab.api.rest.RestMessages.PATH)
 public class RestMessagesBridge implements RestMessages {
 
     private final Messages messages;
